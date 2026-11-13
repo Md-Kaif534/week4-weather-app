@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Responsive weather app with 5-day forecast, city search and unit conversion" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/weather-icons.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>🌤️ Weather Dashboard</h1>
+      <div class="controls">
+        <button id="unitToggle" class="btn" title="Toggle unit">Switch to °F</button>
+        <button id="locationBtn" class="btn" title="Use my location">📍 My location</button>
+      </div>
+    </header>
+
+    <!-- API key setup (shown only if no key is configured) -->
+    <section id="keySetup" class="card hidden">
+      <h2>🔑 API key required</h2>
+      <p>Get a free key from <a href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeatherMap</a> and paste it below. It is stored only in your browser (localStorage).</p>
+      <form id="keyForm" class="key-form">
+        <input id="keyInput" type="text" placeholder="Paste API key" required />
+        <button class="btn primary" type="submit">Save</button>
+      </form>
+    </section>
+
+    <section class="search-wrap">
+      <form id="searchForm" autocomplete="off">
+        <input id="searchInput" type="text" placeholder="Search city (e.g. Delhi)" aria-label="Search city" />
+        <button type="submit" class="btn primary">🔍 Search</button>
+      </form>
+      <ul id="suggestions" class="suggestions hidden" role="listbox"></ul>
+    </section>
+
+    <section id="favorites" class="favorites"></section>
+
+    <main>
+      <div id="status"></div>
+      <section id="alerts"></section>
+      <section id="currentWeather"></section>
+      <h3 class="section-title">5-Day Forecast</h3>
+      <section id="forecast"></section>
+      <section id="mapSection" class="card hidden">
+        <h3>🗺️ Map</h3>
+        <iframe id="mapFrame" title="Location map" loading="lazy"></iframe>
+      </section>
+    </main>
+
+    <footer>
+      <p>Data: <a href="https://openweathermap.org" target="_blank" rel="noopener">OpenWeatherMap</a> · Arena Developers – Week 4 Project</p>
+    </footer>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/weatherService.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

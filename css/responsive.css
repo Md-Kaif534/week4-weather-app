@@ -1,0 +1,18 @@
+/* responsive.css - tablet and mobile layouts */
+@media (max-width: 768px) {
+  .weather-details { grid-template-columns: repeat(2, 1fr); }
+  .forecast-container { grid-template-columns: repeat(3, 1fr); }
+  .temperature { font-size: 3.2rem; }
+}
+
+@media (max-width: 480px) {
+  .app { padding: 14px 10px 30px; }
+  .topbar h1 { font-size: 1.3rem; }
+  .forecast-container { grid-template-columns: repeat(2, 1fr); }
+  #searchForm { flex-direction: column; }
+  .btn { width: 100%; }
+  .controls { width: 100%; }
+  .controls .btn { flex: 1; }
+  .temperature { font-size: 2.8rem; }
+  #mapFrame { height: 200px; }
+}

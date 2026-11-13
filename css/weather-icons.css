@@ -1,0 +1,18 @@
+/* weather-icons.css - emoji based weather icons with subtle animations (no external dependency) */
+.wi-icon {
+  display: inline-block;
+  font-size: 2.4rem;
+  line-height: 1;
+  animation: floaty 3s ease-in-out infinite;
+}
+
+.weather-condition .wi-icon { font-size: 3rem; }
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wi-icon, .fade-in, .spinner { animation: none; }
+}

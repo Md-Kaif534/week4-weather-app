@@ -1,0 +1,37 @@
+
+Temperature conversion
+  ✔ 0°C -> 0 in celsius
+  ✔ 0°C -> 32°F
+  ✔ 100°C -> 212°F
+  ✔ -40°C -> -40°F
+  ✔ 25.6°C rounds to 26 in celsius
+
+Wind conversion
+  ✔ 10 m/s = 36.0 km/h
+  ✔ 10 m/s = 22.4 mph
+
+Icon mapping
+  ✔ thunderstorm id 211
+  ✔ clear day
+  ✔ clear night
+  ✔ rain id 501
+
+Forecast grouping
+  ✔ groups 3-hour items by day
+
+HTML escaping
+  ✔ escapes script tags
+
+Storage (favorites & cache)
+  ✔ add favorite
+  ✔ remove favorite
+  ✔ favorites limited to MAX
+  ✔ cache returns fresh data
+  ✔ cache expires
+
+Error mapping
+  ✔ 404 -> city not found
+  ✔ 401 -> invalid key
+  ✔ 429 -> rate limit
+
+Result: 21 passed, 0 failed
